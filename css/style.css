@@ -15,18 +15,28 @@ body {
   --primary-color: #ff60e6;
   --primary-color-rgb: 0, 123, 255;
   --background-color: #f8f5f0;
+  --secondry-color: #ffadf2;
+}
+
+.hover_button:hover {
+  background-color: var(--secondry-color);
 }
 
 /* Navbar CSS */
 .navbar {
   padding: 48px 160px 16px 160px;
   background: var(--background-color);
+  color: #000;
 }
 
 .creater_btn {
   background: var(--primary-color);
 }
+.link_hover:hover {
+  color: var(--secondry-color);
+}
 
+/* Css For Hero Section */
 .hero_section {
   position: relative;
   display: flex;
@@ -83,6 +93,7 @@ body {
   top: 220px;
   right: 12%;
 }
+
 .hands_1 {
   top: 0;
   left: 0;
@@ -141,20 +152,62 @@ body {
   border: none;
   padding: 8px 25px;
   background: var(--primary-color);
-  font-weight: bold;
   cursor: pointer;
   z-index: 999;
+}
+.hero_form .input-group-text:hover {
+  background: var(--secondry-color);
+}
+@-webkit-keyframes heartbeat {
+  from {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-transform-origin: center center;
+            transform-origin: center center;
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+  }
+  10% {
+    -webkit-transform: scale(0.91);
+            transform: scale(0.91);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  17% {
+    -webkit-transform: scale(0.98);
+            transform: scale(0.98);
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+  }
+  33% {
+    -webkit-transform: scale(0.87);
+            transform: scale(0.87);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  45% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+  }
+}
+
+.heartbeat {
+	-webkit-animation: heartbeat 1.5s ease-in-out infinite both;
+	        animation: heartbeat 1.5s ease-in-out infinite both;
 }
 
 /* Css For Partners Section */
 .partners_section {
-  padding: 64px 72px 64px 72px;
+  padding: 64px 72px;
   overflow: hidden;
 }
 
 .partners-title {
   font-size: 56px;
   font-weight: 700;
+  margin-bottom: 40px;
 }
 .partners_box {
   max-width: 1192px;
@@ -164,15 +217,15 @@ body {
   background-color: #fff;
 }
 
-.card_1 {
+/* .card_1 {
   width: 530px;
   height: 201px;
   padding: 24px;
 }
-.card_1_title{
-font-size: 48px;
-font-weight: 600;
-line-height: 57.28px;
+.card_1_title {
+  font-size: 48px;
+  font-weight: 600;
+  line-height: 57.28px;
 }
 .card_2 {
   width: 404px;
@@ -187,14 +240,24 @@ line-height: 57.28px;
   padding: 24px;
   margin-left: 32px;
   border-radius: 16px;
-  background-color: #FFADF2;
-  
-
-}
-/* .partners_card {
-  position: relative;
-    left: 53%;
+  background-color: #ffadf2;
 } */
+
+.card_1_title {
+  font-size: 48px;
+  font-weight: 600;
+  line-height: 57.28px;
+}
+.card_2 {
+  padding: 24px;
+  border-radius: 16px;
+  background: var(--primary-color);
+}
+.card_3 {
+  padding: 24px;
+  border-radius: 16px;
+  background: var(--secondry-color);
+}
 .underline {
   position: relative;
   top: 146px;
@@ -208,19 +271,12 @@ line-height: 57.28px;
 }
 /* CSS For Work Section  */
 
-.section-title {
-  font-size: 1.5rem;
-  font-weight: bold;
-  margin-bottom: 2rem;
+.work_section {
+  padding-top: 64px;
+  font-size: 56px;
+  font-weight: 700;
 }
-.image-container {
-  display: inline-block;
-  position: relative;
-}
-.main-image {
-  max-width: 100%;
-  border-radius: 15px;
-}
+
 
 /* Media Queries */
 
@@ -268,6 +324,9 @@ line-height: 57.28px;
     left: 24%;
     top: 30%;
   }
+  .women{
+    width: 80%;
+  }
 }
 
 @media (max-width: 992px) {
@@ -301,6 +360,12 @@ line-height: 57.28px;
   }
 }
 
+@media(max-width:845px){
+  .partners-title{
+    font-size: 45px;
+  }
+}
+
 @media (max-width: 768px) {
   .navbar {
     padding: 24px 20px;
@@ -324,6 +389,9 @@ line-height: 57.28px;
   .underline {
     top: 105px;
     left: 20%;
+  }
+  .partners_section{
+    padding: auto;
   }
 }
 
@@ -356,6 +424,10 @@ line-height: 57.28px;
   .vector {
     width: 70%;
   }
+  .partners_section {
+    padding: 20px 10px;
+}
+
 }
 
 @media (max-width: 576px) {
@@ -377,6 +449,9 @@ line-height: 57.28px;
     width: 46%;
     left: 19%;
   }
+  .partners-title{
+    font-size: 20px;
+  }
 }
 
 @media (max-width: 360px) {
@@ -387,9 +462,6 @@ line-height: 57.28px;
     top: 28%;
     width: 60%;
     left: 9%;
-  }
-  .logo {
-    width: 100px;
   }
   .hero_form {
     max-width: 100%;
