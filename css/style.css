@@ -380,11 +380,6 @@ line-height: 57.28px;
 }
 
 @media (max-width: 360px) {
-  .fb_2 {
-  }
-  /* .hero_subtitle_box {
-    max-width: 90%;
-} */
   .hands_1 {
     width: 60%;
   }
