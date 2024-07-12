@@ -13,6 +13,7 @@ body {
 
 :root {
   --primary-color: #ff60e6;
+  --primary-color-rgb: 0, 123, 255;
   --background-color: #f8f5f0;
 }
 
@@ -146,25 +147,54 @@ body {
 }
 
 /* Css For Partners Section */
-.partners-section {
-  background-color: #f8f9fa;
+.partners_section {
   padding: 64px 72px 64px 72px;
+  overflow: hidden;
 }
 
 .partners-title {
   font-size: 56px;
   font-weight: 700;
 }
-
-.card {
-  border-radius: 15px;
-  border: none;
+.partners_box {
+  max-width: 1192px;
+  height: 340px;
+  padding: 69px 0px 70px 104px;
+  border-radius: 24px;
+  background-color: #fff;
 }
 
-.card p {
-  margin-bottom: 0;
+.card_1 {
+  width: 530px;
+  height: 201px;
+  padding: 24px;
 }
+.card_1_title{
+font-size: 48px;
+font-weight: 600;
+line-height: 57.28px;
+}
+.card_2 {
+  width: 404px;
+  height: 196px;
+  padding: 24px;
+  border-radius: 16px;
+  background: var(--primary-color);
+}
+.card_3 {
+  width: 404px;
+  height: 196px;
+  padding: 24px;
+  margin-left: 32px;
+  border-radius: 16px;
+  background-color: #FFADF2;
+  
 
+}
+/* .partners_card {
+  position: relative;
+    left: 53%;
+} */
 .underline {
   position: relative;
   top: 146px;
@@ -172,7 +202,9 @@ body {
   z-index: -1;
 }
 .vector {
-  position: relative;
+  position: absolute;
+  left: 0;
+  z-index: -1;
 }
 /* CSS For Work Section  */
 
@@ -188,19 +220,6 @@ body {
 .main-image {
   max-width: 100%;
   border-radius: 15px;
-}
-
-.icon-1 {
-  top: 10%;
-  left: 15%;
-}
-.icon-2 {
-  top: 20%;
-  right: 20%;
-}
-.icon-3 {
-  bottom: 15%;
-  left: 25%;
 }
 
 /* Media Queries */
@@ -334,6 +353,9 @@ body {
   .bulb_1 {
     display: none;
   }
+  .vector {
+    width: 70%;
+  }
 }
 
 @media (max-width: 576px) {
@@ -344,7 +366,9 @@ body {
     font-size: 25px;
   }
   .underline {
-    display: none;
+    top: 67px;
+    left: 46%;
+    width: 40%;
   }
 }
 @media (max-width: 468px) {
@@ -357,7 +381,6 @@ body {
 
 @media (max-width: 360px) {
   .fb_2 {
-   
   }
   /* .hero_subtitle_box {
     max-width: 90%;
@@ -370,10 +393,12 @@ body {
     width: 60%;
     left: 9%;
   }
-  .logo{
+  .logo {
     width: 100px;
   }
-
+  .hero_form {
+    max-width: 100%;
+  }
   /* .hero_section {
     position: static;
     width: 100%;
