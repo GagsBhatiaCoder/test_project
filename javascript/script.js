@@ -1,5 +1,5 @@
 const img = document.getElementById('heartbeatImage');
-const proximityDistance = 100; // Distance in pixels within which the animation will trigger
+const proximityDistance = 100;
 
 document.addEventListener('mousemove', (e) => {
   const imgRect = img.getBoundingClientRect();
@@ -14,3 +14,19 @@ document.addEventListener('mousemove', (e) => {
     img.classList.remove('heartbeat');
   }
 });
+
+function checkScreenSize() {
+    if (window.innerWidth < 576) {
+      document.removeEventListener('mousemove', handleMouseMove);
+      img.classList.add('heartbeat');
+    } else {
+      document.addEventListener('mousemove', handleMouseMove);
+      img.classList.remove('heartbeat');
+    }
+  }
+  
+
+  checkScreenSize();
+  
+
+  window.addEventListener('resize', checkScreenSize);

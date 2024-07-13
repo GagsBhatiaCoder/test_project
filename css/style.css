@@ -486,6 +486,10 @@ body {
     width: auto;
     height: auto;
    }
+    #heartbeatImage {
+      -webkit-animation: heartbeat 1.5s ease-in-out infinite both;
+      animation: heartbeat 1.5s ease-in-out infinite both;
+    }
 }
 @media (max-width: 468px) {
   .line_3 {
@@ -510,12 +514,5 @@ body {
   .hero_form {
     max-width: 100%;
   }
-  /* .hero_section {
-    position: static;
-    width: 100%;
-    height: auto;
-  } */
-  /* .background-images {
-    display: none;
-  } */
+
 }
