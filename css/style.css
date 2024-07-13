@@ -170,6 +170,7 @@ body {
 .hero_form .input-group-text:hover {
   background: var(--secondry-color);
 }
+
 @-webkit-keyframes heartbeat {
   from {
     -webkit-transform: scale(1);
@@ -448,11 +449,17 @@ body {
   .bulb_1 {
     display: none;
   }
+  .bulb_2{
+    top:427px;
+  }
   .vector {
     width: 70%;
   }
   .partners_section {
     padding: 20px 10px;
+  }
+  .partners-title{
+    font-size: 30px;
   }
 }
 
@@ -460,7 +467,7 @@ body {
   .hero_form {
     max-width: 80%;
   }
-  .partners-title {
+  .card_1_title {
     font-size: 25px;
   }
   .underline {
@@ -470,8 +477,15 @@ body {
   }
   .hands_1{
     width: 40%;
-
   }
+  .card_2{
+   width: auto;
+   height: auto;
+  }
+  .card_3{
+    width: auto;
+    height: auto;
+   }
 }
 @media (max-width: 468px) {
   .line_3 {
