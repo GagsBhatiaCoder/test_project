@@ -33,22 +33,22 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav m-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link link_hover" aria-current="page" href="#">
+              <a class="nav-link link_hover me-3" aria-current="page" href="#">
                 Partners
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link link_hover" aria-current="page" href="#">
+              <a class="nav-link link_hover me-3" aria-current="page" href="#">
                 How we work
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link link_hover" aria-current="page" href="#"
+              <a class="nav-link link_hover me-3" aria-current="page" href="#"
                 >Review</a
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link link_hover" aria-current="page" href="#"
+              <a class="nav-link link_hover me-3" aria-current="page" href="#"
                 >Charity</a
               >
             </li>
@@ -124,7 +124,7 @@
           partnership opportunities!
         </h2>
         <div class="container partners_box d-flex">
-          <div class="card_1 ">
+          <div class="card_1">
             <h3 class="card_1_title">Partners:</h3>
             <p>
               Our creative agency forms strong partnerships with diverse
@@ -132,31 +132,69 @@
               respect, and a shared vision for success.
             </p>
           </div>
-          <div class="d-flex ">
-            <div class="card_2 p-3 text-center me-3">
-              <div class="d-flex justify-content-between">
-                <img src="/images/twitter.png" alt="" />
-                <p>2008 — TODAY</p>
-              </div>
+          <div
+            id="myCarousel"
+            class="carousel slide container"
+            data-bs-ride="carousel"
+          >
+            <div class="carousel-inner w-100">
+              <div class="carousel-item active">
+                <div class="col-md-8">
+                  <div class="card card-body card_2">
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                      <img src="/images/twitter.png" alt="" />
+                      <p class="mb-0">2008 — TODAY</p>
+                    </div>
 
-              <p>
-                Provides communication between the agency and brands. Collects
-                customer feedback and encourages discussion about the product,
-                which helps improve it.
-              </p>
-            </div>
-            <div class="card_3 p-3 text-center">
-              <div class="d-flex justify-content-between">
-                <img src="/images/pintrest.png" alt="" />
-                <p>2008 — TODAY</p>
+                    <p>
+                      Provides communication between the agency and brands.
+                      Collects customer feedback and encourages discussion about
+                      the product, which helps improve it.
+                    </p>
+                  </div>
+                </div>
               </div>
+              <div class="carousel-item">
+                <div class="col-md-8">
+                  <div class="card card-body card_3">
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                      <img src="/images/pintrest.png" alt="" />
+                      <p class="mb-0">2008 — TODAY</p>
+                    </div>
 
-              <p>
-                Provides communication between the agency and brands. Collects
-                customer feedback and encourages discussion about the product,
-                which helps improve it.
-              </p>
+                    <p>
+                      Provides communication between the agency and brands.
+                      Collects customer feedback and encourages discussion about
+                      the product, which helps improve it.
+                    </p>
+                  </div>
+                </div>
+              </div>
             </div>
+            <!-- <button
+              class="carousel-control-prev"
+              type="button"
+              data-bs-target="#myCarousel"
+              data-bs-slide="prev"
+            >
+              <span
+                class="carousel-control-prev-icon"
+                aria-hidden="true"
+              ></span> -->
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button
+              class="carousel-control-next"
+              type="button"
+              data-bs-target="#myCarousel"
+              data-bs-slide="next"
+            >
+              <span
+                class="carousel-control-next-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Next</span>
+            </button>
           </div>
         </div>
       </div>
@@ -170,6 +208,8 @@
         <img src="/images/women.png" class="women" alt="work image" />
       </div>
     </section>
+
+    <div></div>
 
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"

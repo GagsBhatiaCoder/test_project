@@ -22,6 +22,10 @@ body {
   background-color: var(--secondry-color);
 }
 
+.link_hover {
+  color: #000;
+}
+
 /* Navbar CSS */
 .navbar {
   padding: 48px 160px 16px 160px;
@@ -143,10 +147,18 @@ body {
 .hero_form .form-control {
   padding-right: 100px;
 }
+.hero_form .form-control::placeholder {
+  color: #d4d4d4;
+  padding-left: 20px;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: left;
+}
 
 .hero_form .input-group-text {
   position: absolute;
-  right: 10px;
+  right: 5px;
   top: 50%;
   transform: translateY(-50%);
   border: none;
@@ -161,41 +173,41 @@ body {
 @-webkit-keyframes heartbeat {
   from {
     -webkit-transform: scale(1);
-            transform: scale(1);
+    transform: scale(1);
     -webkit-transform-origin: center center;
-            transform-origin: center center;
+    transform-origin: center center;
     -webkit-animation-timing-function: ease-out;
-            animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
   }
   10% {
     -webkit-transform: scale(0.91);
-            transform: scale(0.91);
+    transform: scale(0.91);
     -webkit-animation-timing-function: ease-in;
-            animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
   }
   17% {
     -webkit-transform: scale(0.98);
-            transform: scale(0.98);
+    transform: scale(0.98);
     -webkit-animation-timing-function: ease-out;
-            animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
   }
   33% {
     -webkit-transform: scale(0.87);
-            transform: scale(0.87);
+    transform: scale(0.87);
     -webkit-animation-timing-function: ease-in;
-            animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
   }
   45% {
     -webkit-transform: scale(1);
-            transform: scale(1);
+    transform: scale(1);
     -webkit-animation-timing-function: ease-out;
-            animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
   }
 }
 
 .heartbeat {
-	-webkit-animation: heartbeat 1.5s ease-in-out infinite both;
-	        animation: heartbeat 1.5s ease-in-out infinite both;
+  -webkit-animation: heartbeat 1.5s ease-in-out infinite both;
+  animation: heartbeat 1.5s ease-in-out infinite both;
 }
 
 /* Css For Partners Section */
@@ -221,27 +233,11 @@ body {
   width: 530px;
   height: 201px;
   padding: 24px;
-}
-.card_1_title {
-  font-size: 48px;
-  font-weight: 600;
-  line-height: 57.28px;
-}
-.card_2 {
-  width: 404px;
-  height: 196px;
-  padding: 24px;
-  border-radius: 16px;
-  background: var(--primary-color);
-}
-.card_3 {
-  width: 404px;
-  height: 196px;
-  padding: 24px;
-  margin-left: 32px;
-  border-radius: 16px;
-  background-color: #ffadf2;
 } */
+
+.card {
+  border: none;
+}
 
 .card_1_title {
   font-size: 48px;
@@ -249,12 +245,16 @@ body {
   line-height: 57.28px;
 }
 .card_2 {
-  padding: 24px;
+  width: 404px;
+  height: 196px;
+  padding: 16px;
   border-radius: 16px;
   background: var(--primary-color);
 }
 .card_3 {
-  padding: 24px;
+  width: 404px;
+  height: 196px;
+  padding: 16px;
   border-radius: 16px;
   background: var(--secondry-color);
 }
@@ -276,7 +276,6 @@ body {
   font-size: 56px;
   font-weight: 700;
 }
-
 
 /* Media Queries */
 
@@ -317,14 +316,16 @@ body {
 
 @media (max-width: 1110px) {
   .bulb_2 {
-    display: none;
+    right: 18%;
+    width: 6%;
+    top: 284px;
   }
   .line_3 {
     width: 38%;
     left: 24%;
     top: 30%;
   }
-  .women{
+  .women {
     width: 80%;
   }
 }
@@ -349,7 +350,10 @@ body {
     width: 36%;
   }
   .hands_2 {
-    display: none;
+    width: 26%;
+  }
+  .partners_box {
+    padding: 65px 22px;
   }
   .partners-title {
     font-size: 50px;
@@ -358,10 +362,13 @@ body {
     top: 132px;
     left: 41%;
   }
+  .bulb_2{
+    top: 343px;
+  }
 }
 
-@media(max-width:845px){
-  .partners-title{
+@media (max-width: 845px) {
+  .partners-title {
     font-size: 45px;
   }
 }
@@ -383,16 +390,36 @@ body {
   .hero_form .input-group-text {
     padding: 10px 20px;
   }
+  .partners_box {
+    height: auto;
+    flex-direction: column;
+  }
   .partners-title {
     font-size: 38px;
+  }
+  .partners_section {
+    padding: auto;
   }
   .underline {
     top: 105px;
     left: 20%;
   }
-  .partners_section{
-    padding: auto;
+  .hands_2{
+    bottom: 40px;
   }
+  .bulb_2{
+    top: 388px;
+  }
+  .hands_1{
+    width: 32%;
+  }
+  .line_1{
+    width: 30%;
+  }
+  .fb_1{
+    width: 9%;
+  }
+ 
 }
 
 @media (max-width: 650px) {
@@ -426,8 +453,7 @@ body {
   }
   .partners_section {
     padding: 20px 10px;
-}
-
+  }
 }
 
 @media (max-width: 576px) {
@@ -442,6 +468,10 @@ body {
     left: 46%;
     width: 40%;
   }
+  .hands_1{
+    width: 40%;
+
+  }
 }
 @media (max-width: 468px) {
   .line_3 {
@@ -449,7 +479,7 @@ body {
     width: 46%;
     left: 19%;
   }
-  .partners-title{
+  .partners-title {
     font-size: 20px;
   }
 }
